@@ -1,7 +1,7 @@
 api_key = e42a1840c1c5f4110683689d16aa2862
 secret = ebe30014cd42ac4f
 
-redirect(http://flickr.com/services/auth/?api_key=[api_key]&perms=write&api_sig=[api_sig])
+redirect(http://flickr.com/services/auth/?api_key={{api_key}}&perms=write&api_sig=[api_sig])
 response = flickr.auth.getToken(api_key, frob)   signed???
 
 flickr.people.getUploadStatus(api_key)
