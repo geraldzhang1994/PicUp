@@ -1,7 +1,11 @@
 var http = require("http");
+var connect = require('connect');
+var express = require('express');
+var app = express();
 
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello World");
-  response.end();
-}).listen(8888);
+app.use(express.static(__dirname + "/public/"));
+app.use(app.router);
+
+app.listen(process.env.PORT || 3000);
+
+console.log('server running on 3000');
